@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Gate;
 
 class StoreProjectRequest extends FormRequest
 {
@@ -13,7 +14,7 @@ class StoreProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        //
+        return true;
     }
 
     /**

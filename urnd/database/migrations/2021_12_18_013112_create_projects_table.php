@@ -15,15 +15,15 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('pname');
-            $table->string('ptype');
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->integer('duration');
-            $table->float('cost');
-            $table->string('client');
-            $table->string('progress');
-            $table->string('status');
+            $table->string('pname')->nullable();
+            $table->string('ptype')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->integer('duration')->nullable();
+            $table->float('cost')->nullable();
+            $table->string('client')->nullable();
+            $table->string('progress')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

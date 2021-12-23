@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterTableProjectsAddForeignKey extends Migration
+class CreateTeamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AlterTableProjectsAddForeignKey extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->string('leader_name')->references('name')->on('users')->cascadeOnDelete();
+        Schema::create('teams', function (Blueprint $table) {
+            $table->bigIncrements('id')->nullable();
+            $table->string('tname')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AlterTableProjectsAddForeignKey extends Migration
      */
     public function down()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            
-        });
+        Schema::dropIfExists('teams');
     }
 }

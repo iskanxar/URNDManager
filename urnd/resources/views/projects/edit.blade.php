@@ -16,13 +16,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="pname">
                     Project Name
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="pname" type="text" placeholder="{{ old('pname', $project->pname) }}">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="pname" type="text" placeholder="{{ old('pname', $project->pname) }}">
                 </div>
                 <div class="w-full px-3 mb-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="client">
                     Client Name
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="client" type="text" placeholder="{{ old('client', $project->client) }}">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="client" type="text" placeholder="{{ old('client', $project->client) }}">
                 </div>
             </div>
 
@@ -32,7 +32,7 @@
                         Progress
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="progress">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="progress">
                         <option value="Inception">Inception</option>
                         <option value="Milestone 1">Milestone 1</option>
                         <option value="Milestone 2">Milestone 2</option>
@@ -49,7 +49,7 @@
                         Status
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="status">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="status">
                         <option value="On track">On track</option>
                         <option value="Delayed">Delayed</option>
                         <option value="Extended">Extended</option>

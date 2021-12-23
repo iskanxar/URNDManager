@@ -8,7 +8,7 @@
     <div>
         <div class="max-w-6xl mx-auto py-10 sm:px-6 lg:px-8">
             <div class="block mb-8">
-                <a href="{{ route('projects.index') }}" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">Back to list</a>
+                <a href="{{ route('teams.index') }}" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">Back to list</a>
             </div>
             <div class="flex flex-col">
                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -17,76 +17,45 @@
                             <table class="min-w-full divide-y divide-gray-200 w-full">
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Project Name
+                                        Team Name
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->pname }}
+                                        {{ $team->tname }}
                                     </td>
                                 </tr>
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Project Type
+                                        Team Leader
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->ptype }}
+                                        {{ $team->leader_name }}
                                     </td>
                                 </tr>
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Start Date
+                                        Member 1
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->start_date }}
+                                        {{ $team->member1_name }}
                                     </td>
                                 </tr>
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        End Date
+                                        Member 2
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->end_date }}
+                                        {{ $team->member2_name }}
                                     </td>
                                 </tr>
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Duration(Month)
+                                        Member 3
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->duration }}
+                                        {{ $team->member3_name }}
                                     </td>
                                 </tr>
-                                <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Cost(RM)
-                                    </th>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->cost }}
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Client
-                                    </th>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->client }}
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Progress
-                                    </th>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->progress }}
-                                    </td>
-                                </tr>
-                                <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
-                                        Status
-                                    </th>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
-                                        {{ $project->status }}
-                                    </td>
-                                </tr>
+                            
                             </table>
                         </div>
                     </div>

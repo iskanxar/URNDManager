@@ -18,10 +18,18 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('projects.index') }}" :active="request()->routeIs('projects.index')">
+                    <x-jet-nav-link href="{{ route('projects.index') }}" :active="request()->routeIs('projects.*')">
                         {{ __('Projects') }}
                     </x-jet-nav-link>
                 </div>
+                
+                
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('teams.index') }}" :active="request()->routeIs('teams.*')">
+                        {{ __('Teams') }}
+                    </x-jet-nav-link>
+                </div>`
+                
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

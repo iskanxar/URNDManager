@@ -40,9 +40,47 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProjectRequest $request)
+    public function store(Request $request)
     {
-        Project::create($request);
+        $this->validate($request, [
+            'pname' => 'required', 
+
+            'client' => 'required',
+
+            'leader_name' => 'required',
+
+            'ptype' => 'required',
+
+            'start_date' => 'required',
+
+            'end_date' => 'required',
+
+            'duration' =>   'required',
+
+            'cost' => 'required', 
+
+            'progress' =>   'required', 
+
+            'status' => 'required', 
+
+            'leader_name' => 'required',
+
+        ]);
+
+        $project = new Project([
+            'pname'         =>  $request->get('pname'),
+            'ptype'         =>  $request->get('ptype'),
+            'client'         =>  $request->get('client'),
+            'start_date'    =>  $request->get('start_date'),
+            'end_date'      =>  $request->get('end_date'),
+            'duration'      =>  $request->get('duration'),
+            'cost'          =>  $request->get('cost'),
+            'progress'      =>  $request->get('progress'),
+            'status'        =>  $request->get('status'),
+            'leader_name'   =>  $request->get('leader_name'),
+        ]);
+
+        $project->save();
 
         return redirect()->route('projects.index');
     }
@@ -76,9 +114,11 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProjectRequest $request, Project $project)
+    public function update(Request $request, Project $project)
     {
-        $project->update($request->validated());
+        $project->progress = $request->progress;
+        $project->status = $request->status;
+        $project->save();
 
         return redirect()->route('projects.index');
     }

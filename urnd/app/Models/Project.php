@@ -9,9 +9,15 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['pname','ptype','start_date','end_date','duration','cost','client','progress','status'];
+    public $timestamps=false;
+
+    protected $fillable = ['pname','ptype','start_date','end_date','duration','cost','client','progress','status','leader_name'];
 
     public function users(){
         return $this->belongsTo(User::class);
+    }
+
+    public function teams(){
+        return $this->belongsTo(Team::class);
     }
 }

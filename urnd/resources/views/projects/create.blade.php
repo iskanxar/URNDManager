@@ -13,22 +13,22 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="pname">
                     Project Name
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="pname" type="text" placeholder="Project Name">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="pname" type="text" placeholder="Project Name">
                 </div>
                 <div class="w-full px-3 mb-6">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="client">
                     Client Name
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="client" type="text" placeholder="Client Name">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="client" type="text" placeholder="Client Name">
                 </div>
                 <div class="w-full px-3 mb-6">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="leader_id">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="leader_name">
                         Project Leader
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="leader_id">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="leader_name">
                         @foreach ($lead as $leader)
-                        <option value = "{{$leader->id}}">{{$leader->name}}</option>
+                        <option value = "{{$leader->name}}">{{$leader->name}}</option>
                         @endforeach
                         </select>
                             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -44,7 +44,7 @@
                         Project Type
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="ptype">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="ptype">
                         <option value = 'Research'>Research</option>
                         <option value = 'Consultancy'>Consultancy</option>
                         </select>
@@ -57,13 +57,13 @@
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="duration">
                         Duration(Month)
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="duration" type="text" placeholder="Duration">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="duration" type="text" placeholder="Duration">
                 </div>
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cost">
                         Cost(RM)
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="cost" type="text" placeholder="Cost">
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="cost" type="text" placeholder="Cost">
                 </div>
             </div>
 
@@ -72,13 +72,13 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="start_date">
                             Start Date
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="start_date" type="date">
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="start_date" type="date">
                 </div>
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="end_date">
                             End Date
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="end_date" type="date">
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="end_date" type="date">
                 </div>
             </div>
 
@@ -88,7 +88,7 @@
                         Progress
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="progress">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="progress">
                         <option value="Inception">Inception</option>
                         <option value="Milestone 1">Milestone 1</option>
                         <option value="Milestone 2">Milestone 2</option>
@@ -105,7 +105,7 @@
                         Status
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="status">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="status">
                         <option value="On track">On track</option>
                         <option value="Delayed">Delayed</option>
                         <option value="Extended">Extended</option>
