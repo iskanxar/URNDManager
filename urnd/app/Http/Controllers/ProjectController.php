@@ -30,6 +30,7 @@ class ProjectController extends Controller
      */
     public function create(User $lead)
     {
+        $this->authorize('create');
         $lead = User::where('role_id', '=', 2)->get();
         return view('projects.create',['lead'=>$lead]);
     }
@@ -42,6 +43,8 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create');
+
         $this->validate($request, [
             'pname' => 'required', 
 
@@ -104,6 +107,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
+        $this->authorize('update', $project);
         return view('projects.edit', compact('project'));
     }
 
@@ -116,6 +120,8 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
+        $this->authorize('update', $project);
+
         $project->progress = $request->progress;
         $project->status = $request->status;
         $project->save();
@@ -131,6 +137,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        $this->authorize('delete');
+
         $project->delete();
         return redirect()->route('projects.index');
     }
