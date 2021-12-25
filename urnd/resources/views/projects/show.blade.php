@@ -1,3 +1,9 @@
+<head>
+<link rel="icon" href="{{ asset('/images/logo-partner-urnd.jpg') }}">
+<title>URND Manager</title>
+</head>
+
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-bold text-xl text-purple-800 leading-tight">
@@ -16,7 +22,7 @@
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table class="min-w-full divide-y divide-gray-200 w-full">
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Project Name
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -24,7 +30,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Project Type
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -32,7 +38,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Start Date
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -40,7 +46,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         End Date
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -48,7 +54,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Duration(Month)
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -56,7 +62,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Cost(RM)
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -64,7 +70,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Client
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -72,7 +78,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Progress
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
@@ -80,7 +86,7 @@
                                     </td>
                                 </tr>
                                 <tr class="border-b">
-                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-purple-700 uppercase tracking-wider">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Status
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">

@@ -1,3 +1,8 @@
+<head>
+<link rel="icon" href="{{ asset('/images/logo-partner-urnd.jpg') }}">
+<title>URND Manager</title>
+</head>
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-bold text-xl text-purple-800 leading-tight">

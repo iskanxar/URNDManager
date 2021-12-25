@@ -1,3 +1,8 @@
+<head>
+<link rel="icon" href="{{ asset('/images/logo-partner-urnd.jpg') }}">
+<title>URND Manager</title>
+</head>
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
