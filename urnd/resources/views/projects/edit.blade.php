@@ -71,7 +71,7 @@
                         <div class="flex items-center flex justify-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
                             <a href="{{ route('projects.index') }}" class="ml-4 inline-flex items-center px-4 py-2 bg-gray-600 border border-black rounded-md font-bold text-xs text-black uppercase tracking-widest hover:bg-red-900 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-75 transition ease-in-out duration-150">Cancel</a>
                             <x-jet-button class="ml-4 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
-                                {{ __('Create') }}
+                                {{ __('Save') }}
                             </x-jet-button>
                             
                         </div>
