@@ -28,7 +28,30 @@
                     <x-jet-nav-link href="{{ route('teams.index') }}" :active="request()->routeIs('teams.*')">
                         {{ __('Teams') }}
                     </x-jet-nav-link>
-                </div>`
+                </div>
+
+                @can('viewusers')
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('managers.index') }}" :active="request()->routeIs('managers.*')">
+                        {{ __('Managers') }}
+                    </x-jet-nav-link>
+                </div>
+                
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('leaders.index') }}" :active="request()->routeIs('leaders.*')">
+                        {{ __('Leaders') }}
+                    </x-jet-nav-link>
+                </div>
+                @endcan
+
+                @can('viewstaffs')
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('staffs.index') }}" :active="request()->routeIs('staffs.*')">
+                        {{ __('Staffs') }}
+                    </x-jet-nav-link>
+                </div>
+                @endcan
                 
             </div>
 

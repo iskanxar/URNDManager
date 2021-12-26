@@ -28,6 +28,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        Gate::define('viewusers', fn(User $user) => $user->role_id == 1 );
+        Gate::define('leader', fn(User $user) => $user->role_id == 2 );
+        Gate::define('viewstaffs', fn(User $user) => $user->role_id == 1 || $user->role_id == 2);
         Gate::define('create', fn(User $user) => $user->role_id == 1 );
         Gate::define('update_project', fn(User $user, Project $project) => $user->role_id == 2 && $user->name === $project->leader_name);
         Gate::define('update_team', fn(User $user, Team $team) => $user->role_id == 2 && $user->name === $team->leader_name);
