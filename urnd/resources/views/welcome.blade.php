@@ -41,22 +41,22 @@
                                 <div class="mt-4 text-gray-600 dark:text-gray-400 text-sm text-justify">
                                     Established on 18 November 2008, URND is a recognised Research and Development status company by the Malaysian Investment Development Authority (MIDA) under Section 34B, of the Income Tax Act, 1967 and a registered Consulting Company under the Malaysian Ministry of Finance (MOF).
                                 </div>
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm text-justify">
+                                <div class="mt-4 text-gray-600 dark:text-gray-400 text-sm text-justify">
                                     URND has been entrusted with the task to actively seek research and consultancy assignments from the industrial communities such as Tenaga Nasional Berhad (TNB), TNB Research, multinational companies and other potential international conglomerates.
                                 </div>
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm text-justify">
+                                <div class="mt-4 text-gray-600 dark:text-gray-400 text-sm text-justify">
                                     URND aims to drive UNITEN’s capability in assisting Tenaga Nasional Berhad (TNB), industries, government agencies and international partners in high impact research areas in line with the Government’s IR 4.0 efforts such as power engineering, robotics, sustainable energy and IOT (AI, big data) sectors in order to achieve their goals and compete in economic globalisation.
                                 </div>
                             </div>
                             @if (Route::has('login'))
                                 <div class="flex justify-center px-6 py-4 mt-4 ">
                                     @auth
-                                        <a href="{{ url('/dashboard') }}" class="ml-4 text-lg text-gray-700  dark:text-white">Dashboard</a>
+                                        <a href="{{ url('/dashboard') }}" class="ml-4 text-lg text-gray-700 underline dark:text-white">Dashboard</a>
                                     @else
-                                        <div class="bg-black"><a href="{{ route('login') }}" class="ml-4 text-lg text-gray-700  dark:text-white">Log in</a></div>
+                                        <div class="bg-black"><a href="{{ route('login') }}" class="ml-4 text-lg text-gray-700  underline dark:text-white">Log in</a></div>
 
                                         @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="ml-4 text-lg text-gray-700 dark:text-white ">Register</a>
+                                            <a href="{{ route('register') }}" class="ml-4 text-lg text-gray-700 underline dark:text-white ">Register</a>
                                         @endif
                                     @endauth
                                 </div>

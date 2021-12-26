@@ -39,6 +39,14 @@
                                 </tr>
                                 <tr class="border-b">
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
+                                        Project Leader
+                                    </th>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">
+                                        {{ $project->leader_name }}
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Start Date
                                     </th>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-semibold bg-white divide-y divide-gray-200">

@@ -6,7 +6,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-bold text-xl text-purple-800 leading-tight">
-            Create New Teams
+            Create New Team
         </h2>
     </x-slot>
 

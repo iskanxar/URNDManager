@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use App\Models\Project;
+use App\Models\Team;
 use App\Models\User;
 
 class AuthServiceProvider extends ServiceProvider
@@ -28,7 +29,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('create', fn(User $user) => $user->role_id == 1 );
-        Gate::define('update', fn(User $user) => $user->role_id == 2 );
+        Gate::define('update_project', fn(User $user, Project $project) => $user->role_id == 2 && $user->name === $project->leader_name);
+        Gate::define('update_team', fn(User $user, Team $team) => $user->role_id == 2 && $user->name === $team->leader_name);
         Gate::define('delete', fn(User $user) => $user->role_id == 1 );
     }
 }

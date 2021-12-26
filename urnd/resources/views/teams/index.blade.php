@@ -70,7 +70,7 @@
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             <a href="{{ route('teams.show', $team->id) }}" class="px-2 inline-flex text-xs leading-5 font-bold rounded bg-gray-500  text-white">View</a>
-                                            @can('update')
+                                            @can('update_team', $team)
                                             <a href="{{ route('teams.edit', $team->id) }}" class="px-2 inline-flex text-xs leading-5 font-bold rounded bg-indigo-500 text-white">Update</a>
                                             @endcan
 

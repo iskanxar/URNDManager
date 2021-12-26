@@ -6,7 +6,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-bold text-xl text-purple-800 leading-tight">
-            Projects List
+            Project List
         </h2>
     </x-slot>
 
@@ -34,7 +34,7 @@
                                         Project Type
                                     </th>
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
-                                        Start Date
+                                        End Date
                                     </th>
                                     <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-bold text-indigo-700 uppercase tracking-wider">
                                         Client
@@ -66,7 +66,7 @@
                                         </td>
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $project->start_date }}
+                                            {{ $project->end_date }}
                                         </td>
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -87,7 +87,7 @@
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             <a href="{{ route('projects.show', $project->id) }}" class="px-2 inline-flex text-xs leading-5 font-bold rounded bg-gray-500  text-white">View</a>
-                                            @can('update')
+                                            @can('update_project', $project)
                                             <a href="{{ route('projects.edit', $project->id) }}" class="px-2 inline-flex text-xs leading-5 font-bold rounded bg-indigo-500 text-white"">Update</a>
                                             @endcan
 
